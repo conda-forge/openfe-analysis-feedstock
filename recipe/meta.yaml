@@ -13,19 +13,19 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - versioningit
   run:
     - MDAnalysis
     - click
     - netCDF4
     - openff-units
-    - python >=3.9
+    - python >={{ python_min }}
     - tqdm
 
 test:
@@ -33,6 +33,7 @@ test:
     - openfe_analysis
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
