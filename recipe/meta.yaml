@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "openfe-analysis" %}
 {% set version = "0.2.0" %}
 
@@ -54,4 +55,4 @@ extra:
     - dwhswenson
     - ialibay
     - mikemhenry
-    - richardjgowers
+    - atravitz
