@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openfe-analysis
 
 Home: https://github.com/OpenFreeEnergy/openfe_analysis
 
-Package license: GPL-3.0-or-later
+Package license: MIT
 
 Summary: Analysis tools for the openfe ecosystem
 
@@ -153,6 +153,7 @@ Feedstock Maintainers
 
 * [@atravitz](https://github.com/atravitz/)
 * [@dwhswenson](https://github.com/dwhswenson/)
+* [@hannahbaumann](https://github.com/hannahbaumann/)
 * [@ialibay](https://github.com/ialibay/)
 * [@mikemhenry](https://github.com/mikemhenry/)
 
