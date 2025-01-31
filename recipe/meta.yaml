@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "openfe-analysis" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -22,12 +22,13 @@ requirements:
     - python {{ python_min }}
     - versioningit
   run:
-    - MDAnalysis
+    - MDAnalysis >=2.8.0
     - click
     - netCDF4
     - openff-units
     - python >={{ python_min }}
     - tqdm
+    - pyyaml
 
 test:
   imports:
@@ -56,3 +57,4 @@ extra:
     - ialibay
     - mikemhenry
     - atravitz
+    - hannahbaumann
