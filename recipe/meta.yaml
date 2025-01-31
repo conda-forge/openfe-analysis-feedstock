@@ -45,8 +45,8 @@ about:
   description: |
     openfe-analysis is a set of analysis tools to check the 
     health of free energy calculations in the openfe ecosystem.
-  license: GPL-3.0-or-later
-  license_family: GPL
+  license: MIT
+  license_family: MIT
   license_file: LICENSE
   doc_url: https://github.com/OpenFreeEnergy/openfe_analysis
   dev_url: https://github.com/OpenFreeEnergy/openfe_analysis
