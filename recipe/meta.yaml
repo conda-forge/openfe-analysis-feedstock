@@ -13,14 +13,14 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps
   number: 0
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
-    - versioningit
+    - setuptools_scm
   run:
     - MDAnalysis >=2.8.0
     - click
