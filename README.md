@@ -16,7 +16,6 @@ Documentation: https://github.com/OpenFreeEnergy/openfe_analysis
 openfe-analysis is a set of analysis tools to check the
 health of free energy calculations in the openfe ecosystem.
 
-
 Current build status
 ====================
 
