@@ -24,12 +24,15 @@ requirements:
     - setuptools_scm
   run:
     - MDAnalysis >=2.8.0
+    - matplotlib
     - click
     - netCDF4
     - openff-units
     - python >={{ python_min }}
     - tqdm
     - pyyaml
+    - rdkit
+    - spyrmsd
 
 test:
   imports:
