@@ -1,0 +1,64 @@
+schema_version: 1
+
+context:
+  python_min: "3.11"
+  name: openfe-analysis
+  version: "0.5.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  git: https://github.com/OpenFreeEnergy/openfe_analysis.git
+  rev: v${{ version }}
+  depth: -1
+
+build:
+  number: 1
+  noarch: python
+  script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps
+
+requirements:
+  host:
+    - pip
+    - python 3.11.*
+    - setuptools
+    - setuptools_scm
+  run:
+    - MDAnalysis >=2.8.0
+    - matplotlib
+    - click
+    - netCDF4
+    - openff-units
+    - python >=${{ python_min }}
+    - tqdm
+    - pyyaml
+    - rdkit
+    - spyrmsd
+
+tests:
+  - python:
+      imports:
+        - openfe_analysis
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: Analysis tools for the openfe ecosystem
+  description: |
+    openfe-analysis is a set of analysis tools to check the
+    health of free energy calculations in the openfe ecosystem.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/OpenFreeEnergy/openfe_analysis
+  repository: https://github.com/OpenFreeEnergy/openfe_analysis
+  documentation: https://github.com/OpenFreeEnergy/openfe_analysis
+
+extra:
+  recipe-maintainers:
+    - dwhswenson
+    - ialibay
+    - mikemhenry
+    - atravitz
+    - hannahbaumann
