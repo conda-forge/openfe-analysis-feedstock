@@ -10,9 +10,8 @@ package:
   version: ${{ version }}
 
 source:
-  git: https://github.com/OpenFreeEnergy/openfe_analysis.git
-  rev: v${{ version }}
-  depth: -1
+  url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: bd8906a03b5452a497dffd5de820a1dce5efe1edda9075f7f632653405782e78
 
 build:
   number: 1
@@ -22,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python 3.11.*
+    - python ${{ python_min }}.*
     - setuptools
     - setuptools_scm
   run:
