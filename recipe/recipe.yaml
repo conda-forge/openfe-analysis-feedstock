@@ -14,7 +14,7 @@ source:
   sha256: bd8906a03b5452a497dffd5de820a1dce5efe1edda9075f7f632653405782e78
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps
 
@@ -26,7 +26,7 @@ requirements:
     - setuptools_scm
   run:
     - MDAnalysis >=2.8.0
-    - matplotlib
+    - matplotlib-base
     - click
     - netCDF4
     - openff-units
